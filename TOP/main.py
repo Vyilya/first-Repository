@@ -298,3 +298,31 @@
 #         f"Раса персонажа {race}\n"
 #         f"Класс:{role}\n"
 #         f"Имя:{name}\n")
+
+# name = "Hello Word"
+# for i in name:
+#     print(i)
+
+# name = "Hello Word"
+# for i in range(1,11):
+#     print(name)
+
+# i = 1
+# while i<=10:
+#     print(i)
+#     i=i+1
+# i = 1
+# while i<=10:
+#     print(i)
+#     i=i+1
+#     break
+# i = 1
+# while i<=10:
+#     if i != 5:
+#        print(i)
+#     i=i+1
+#     continue
+
+# i = 1
+# while 1 == 1:
+#    print("Бесконечный цикл")
