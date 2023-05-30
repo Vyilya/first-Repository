@@ -326,3 +326,129 @@
 # i = 1
 # while 1 == 1:
 #    print("Бесконечный цикл")
+
+
+# for x in range(2,10):
+#     print(f" 2 * {x} = {2 * x}")
+
+# принцип работы часов
+# for i in range(1,10): # i = 1
+#     for j in range(1,10): # j = 1
+#         print(i , j)
+
+# import time
+# for h in range(0,24): # h = 0
+#     for m in range(0,60): # m = 1
+#         for s in range(0,60): # s = 1
+#             print(f"ч:{h} м:{m} с:{s}")
+#             time.sleep(1)
+
+# import time
+# h = 0
+# while h < 24:
+#     m = 0
+#     while m < 60:
+#         s = 0
+#         while s < 60:
+#             print(f"ч:{h} м:{m} с:{s}")
+#             time.sleep(1)
+#             s += 1
+#         m += 1
+#     h += 1
+
+# dd = int(input("d"))
+# mm = int(input("m"))
+# yy = int(input("y"))
+# if mm == 4 or mm == 6 or mm == 9 or mm == 11:
+#     if dd >= 30:
+#         mm+=1
+#         dd=1
+#         print(dd,mm,yy)
+#     elif dd < 30:
+#         dd+=1
+#         print(dd,mm,yy)
+# elif mm == 1 or mm == 3 or mm == 5 or mm == 7 or mm == 8 or mm == 10:
+#     if dd >= 31:
+#         mm+=1
+#         dd=1
+#         print(dd,mm,yy)
+#     elif dd < 31:
+#         dd+=1
+#         print(dd,mm,yy)
+# elif mm == 12:
+#     if dd >= 31:
+#         mm=1
+#         dd=1
+#         yy+=1
+#         print(dd,mm,yy)
+#     elif dd < 31:
+#         dd+=1
+#         print(dd,mm,yy)
+# elif mm == 2:
+#     if yy % 4 == 0:
+#         if dd >= 29:
+#             mm=+1
+#             dd=1
+#             yy+=1
+#             print(dd,mm,yy)
+#     elif dd < 29:
+#         dd+=1
+#         print(dd,mm,yy)
+#     else:
+#         if dd >= 28:
+#             mm=+1
+#             dd=1
+#             yy+=1
+#             print(dd,mm,yy)
+#         elif dd < 28:
+#             dd+=1
+#             print(dd,mm,yy)
+        
+
+
+# -------------------------------------------------------------------
+# Использование циклов внутри циклов, возврат значений + условия.
+
+print("Регистрация персанажа")
+
+reg = 0
+while reg < 1:
+    reg_gender = 0
+    while reg_gender < 1:
+        gender = input("Выберете пол персанажа\n1-муж\n2-жен\n: ")
+        if gender == "1":
+            gender = "Мужской"
+            reg_gender+=1
+        elif gender == "2":
+            gender = "Женский"
+            reg_gender+=1
+        else:
+            print("Выберете из перечисленного")
+        if reg_gender == 1:
+            reg_race = 0 
+            while reg_race < 1:
+                race = input("0 <-назад Выберете рассу персанажа\n1-Человек\n2-Эльф\n: ")
+                if race == "1":
+                    race = "Человек"
+                    reg_race+=1
+                elif race == "2":
+                    race = "Эльф"
+                    reg_race+=1
+                elif race == "0":
+                    reg_gender = 0
+                    break
+                else:
+                    print("Ошибка:Выберете из перечисленного")
+                if reg_race == 1:
+                    reg_role = 0
+                    if race == "Человек":
+                        while reg_role == 0:
+                            role = input("0 <-назад Выберете рассу персанажа\n1-Воин\n2-Лучник\n: ")
+                            if role == "1":
+                                reg_role == 1
+                    elif race == "Эльф":
+                        pass
+                    
+                    
+
+    reg+=1
