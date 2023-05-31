@@ -299,6 +299,93 @@
 #         f"Класс:{role}\n"
 #         f"Имя:{name}\n")
 
+# myName = "Ilya"
+# for i in range(0,5):
+#    print(myName, i)
+
+# start = int(input("Введите начальное значение: "))
+# end = int(input("введите конечное значение: "))
+# for i in range(start,end + 1):
+#    print(i)
+
+# myName = "Ilya"
+# # for i in range(0,2 + 1):
+# #     print(i)
+# for i in myName:
+#     print(i)
+#     if i == "y":
+#         break
+
+# for i in range(0,29):
+#       if i % 2 !=0:
+#            print(i)
+
+# a = 2
+# b = 3
+# if a + b == 5:
+#     for i in range(0,10):
+#         print((a+b)*i)
+
+# x = int(input("введите число на проверку: "))
+# for i in range(2,x+1):
+#     print(f"делим число {x} на {i}")
+#     print(f"остаток {x % i}")
+#     if x % i == 0 and x !=i:
+#         print("число сложное")
+#         break
+#     elif i == x:
+#         print("число простое")
+        
+# for x in range(0,100):
+#     if x % 2 == 0 and x % 7 == 0:
+#         print(x)
+
+# x = int(input("введите число для получения таблицы умножения: "))
+# for i in range(2,10):
+#     print(f"{x} * {i} = {x * i}")
+
+# sum = 0
+# for i in range(5,8):
+#     sum = sum + i
+#     print(sum)
+
+# i = 0
+# b = 10
+# while i < 10 and b > 0:
+#     print(i)
+#     print(b)
+#     i = i + 1
+#     b = b - 3
+
+# i = 0
+# while i != 11 and i < 100:
+#     print(i)
+#     i = i + 23
+
+# i = 0
+# print("первый цикл")
+# while True:
+#     print(i)
+#     i = i + 1
+#     if i > 10:
+#         i = 0
+#         break
+# print("второй цикл")   
+# x = True
+# while x == True:
+#     print(i)
+#     i = i + 1
+#     if i > 15:
+#         x = False
+
+# myName = "Il'ya"
+# print(len(myName))
+# i = 0
+# while i < len(myName):
+#     print(i)
+#     i+=1
+        
+
 # name = "Hello Word"
 # for i in name:
 #     print(i)
