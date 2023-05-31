@@ -409,46 +409,46 @@
 # -------------------------------------------------------------------
 # Использование циклов внутри циклов, возврат значений + условия.
 
-print("Регистрация персанажа")
+# print("Регистрация персанажа")
 
-reg = 0
-while reg < 1:
-    reg_gender = 0
-    while reg_gender < 1:
-        gender = input("Выберете пол персанажа\n1-муж\n2-жен\n: ")
-        if gender == "1":
-            gender = "Мужской"
-            reg_gender+=1
-        elif gender == "2":
-            gender = "Женский"
-            reg_gender+=1
-        else:
-            print("Выберете из перечисленного")
-        if reg_gender == 1:
-            reg_race = 0 
-            while reg_race < 1:
-                race = input("0 <-назад Выберете рассу персанажа\n1-Человек\n2-Эльф\n: ")
-                if race == "1":
-                    race = "Человек"
-                    reg_race+=1
-                elif race == "2":
-                    race = "Эльф"
-                    reg_race+=1
-                elif race == "0":
-                    reg_gender = 0
-                    break
-                else:
-                    print("Ошибка:Выберете из перечисленного")
-                if reg_race == 1:
-                    reg_role = 0
-                    if race == "Человек":
-                        while reg_role == 0:
-                            role = input("0 <-назад Выберете рассу персанажа\n1-Воин\n2-Лучник\n: ")
-                            if role == "1":
-                                reg_role == 1
-                    elif race == "Эльф":
-                        pass
+# reg = 0
+# while reg < 1:
+#     reg_gender = 0
+#     while reg_gender < 1:
+#         gender = input("Выберете пол персанажа\n1-муж\n2-жен\n: ")
+#         if gender == "1":
+#             gender = "Мужской"
+#             reg_gender+=1
+#         elif gender == "2":
+#             gender = "Женский"
+#             reg_gender+=1
+#         else:
+#             print("Выберете из перечисленного")
+#         if reg_gender == 1:
+#             reg_race = 0 
+#             while reg_race < 1:
+#                 race = input("0 <-назад Выберете рассу персанажа\n1-Человек\n2-Эльф\n: ")
+#                 if race == "1":
+#                     race = "Человек"
+#                     reg_race+=1
+#                 elif race == "2":
+#                     race = "Эльф"
+#                     reg_race+=1
+#                 elif race == "0":
+#                     reg_gender = 0
+#                     break
+#                 else:
+#                     print("Ошибка:Выберете из перечисленного")
+#                 if reg_race == 1:
+#                     reg_role = 0
+#                     if race == "Человек":
+#                         while reg_role == 0:
+#                             role = input("0 <-назад Выберете рассу персанажа\n1-Воин\n2-Лучник\n: ")
+#                             if role == "1":
+#                                 reg_role == 1
+#                     elif race == "Эльф":
+#                         pass
                     
                     
 
-    reg+=1
+#     reg+=1
