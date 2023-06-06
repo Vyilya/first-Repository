@@ -583,41 +583,140 @@
 #         print(listN[i][j])
 
 
-genderList = ["Мужской", "Женский"]
-raceList = ["Человек", "Эльф", "Гном", "Орк", "Тролль"]
-roleList = ["Воин", "Лучник", "Маг"]
-textGender = ""
-for i in range(0, len(genderList)):
-    textGender += f"{i} - {genderList[i]}\n"
-reg_gender = False
-while reg_gender == False:
-    myGender = int(input(f"Выберете пол: \n{textGender}"))
-    if myGender >= len(genderList) or myGender < 0:
-            print("Ошибка: выбери из перечисленного")
-    else:
-        for i in range (0, len(genderList)):
-            if myGender == i:
-                myGender = genderList[i]
-                reg_gender = True
-                print("Вы выбрали пол:",myGender)            
-                break  
-textRace = ""
-for i in range(0, len(raceList)):
-    textRace += f"{i} - {raceList[i]}\n"
-# textRace += f"{len(raceList)} назад"
-reg_race = False
-while reg_race == False:
-    myRace = int(input(f"Выберете расу: \n{textRace}"))
-    if myRace > len(raceList) or myRace < 0:
-            print("Ошибка: выбери из перечисленного")
-    # elif myRace == len(raceList):
-    #             reg_race = False
-    #             break
-    else:
-        for i in range (0, len(raceList)):
-            if myRace == i:
-                myRace = raceList[i]
-                reg_race = True
-                print("Вы выбрали расу:",myRace)            
-                break
-            
+# genderList = ["Мужской", "Женский"] 
+# raceList = ["Человек", "Эльф", "Гном", "Орк", "Тролль"]
+# roleList = ["Воин", "Лучник", "Маг"]
+# textGender = ""
+# for i in range(0, len(genderList)): # повторять от 0 до колличества рас
+#     textGender += f"{i} - {genderList[i]}\n" # в пустую строку каждый раз будет прописываться порядковый номер 
+#     # расы и его значение к примеру вывод после 2х повторений будет выглядеть так:
+#     # № - значение
+#     # 0 - человек
+#     # 1 - эльф  
+#     # т.к.          № 0        № 1
+#     # raceList = ["Человек", "Эльф", "Гном", "Орк", "Тролль"]
+# reg = False # регестрация не завершена 
+# while reg == False:
+#     reg_gender = False
+#     while reg_gender == False:
+#     myGender = int(input(f"Выберете пол: \n{textGender}"))
+#     if myGender >= len(genderList) or myGender < 0:
+#             print("Ошибка: выбери из перечисленного")
+#     else:
+#         for i in range (0, len(genderList)):
+#             if myGender == i:
+#                 myGender = genderList[i]
+#                 reg_gender = True
+#                 print("Вы выбрали пол:",myGender)            
+#                 break  
+# textRace = ""
+# for i in range(0, len(raceList)):
+#     textRace += f"{i} - {raceList[i]}\n"
+# # textRace += f"{len(raceList)} назад"
+# reg_race = False
+# while reg_race == False:
+#     myRace = int(input(f"Выберете расу: \n{textRace}"))
+#     if myRace > len(raceList) or myRace < 0:
+#             print("Ошибка: выбери из перечисленного")
+#     # elif myRace == len(raceList):
+#     #             reg_race = False
+#     #             break
+#     else:
+#         for i in range (0, len(raceList)):
+#             if myRace == i:
+#                 myRace = raceList[i]
+#                 reg_race = True
+#                 print("Вы выбрали расу:",myRace)            
+#                 break
+
+# genderList = ["Мужской", "Женский"]
+# raceList = ["Человек", "Эльф", "Гном", "Орк","Тролль"]
+# roleList = ["Воин","Лучник","Маг"]
+# print(raceList[2])
+# textRace = ""
+# for i in range ( 0 , len(raceList)): 
+#     textRace += f"{i} - {raceList[i]}\n"
+# textRace += f"{len(raceList)} - назад\n"
+# print("Регистрация персонажа")
+# reg = False
+# while reg == False: # цикл для регестрации
+#     # все переменные которые имеют приставку reg отвечают за отметку
+#     reg_gender = False
+#     while reg_gender == False:
+#         gender = input("Выберете пол персонажа\n1-муж\n2-жен\n: ")
+#         if gender == "1":
+#             gender = "Мужской"
+#             reg_gender=True
+#         elif gender == "2":
+#             gender = "Женский"
+#             reg_gender=True
+#         else:
+#             print("Ошибка: Выберете из перечис ленного")
+#         if reg_gender == True:
+#             reg_race = False # созали галочку - (нет)
+#             while reg_race == False: # выполнять пока False
+#                 # принимает только число
+#                 print(12)
+#                 myRace = int(input(f"Выберете расу:\n{textRace}"))
+#                 if myRace > len(raceList) or myRace < 0:
+#                     print("Ошибка: выбери из перечисленного")
+#                 else:
+#                     for i in range ( 0 , len(raceList)):
+#                         if myRace == i:
+#                             race = raceList[i]
+#                             reg_race = True
+#                             print("вы выбрали",race)
+#                             break
+#                 if myRace == len(raceList):
+#                         reg_gender = False
+#                         break
+#     reg = True
+
+
+# задача
+# саши и маша собирают яблоки на компот т.к. саша сильнее маши он должен собрать 6 яблок а маша должна собрать 3 яблока
+# для компота нужно 8 яблок, обязательно что бы маша и саша принесли 8 яблок, 9е могут оставить себе
+
+# result = False # False - яблоки не собраны
+# masha = 0 # кол-во собранных яблок
+# sasha = 0 # кол-во собранных яблок
+
+# while result == False: # собирать яблоки пока у маши и саши не будет 8 шт
+#     sasha = int(input("Сколько яблок собрал саша? "))
+#     if sasha <= 6: # если саша собрал мень чем 6 яблок он должен продолжить собирать
+#         print(f"Саша должен собрать еще {6 - sasha} яблока")
+#     else:
+#         print("Саша не может унести яблоки и все потерял")
+#         sasha = 0
+#     masha = int(input("Сколько яблок собрала маша? "))
+#     if masha <= 3: # если маша собрал мень чем 3 яблок он должен продолжить собирать
+#         print(f"Маша должена собрать еще {3 - masha} яблока")
+#     else:
+#         print("Маша не может унести яблоки и все потеряла")
+#         masha = 0
+#     if masha + sasha >=8:
+#         result = True
+#         print(f"Компот готов и осталось {(sasha+masha)-8} яблок")
+
+# задача список гостей
+
+guestList = []
+textguest = ""
+for i in range(0, len(guestList)): 
+    textguest += f"{i} - {guestList[i]}\n" 
+reg = False
+while reg == False:
+    reg_guest = False
+    while reg_guest == False:
+        guest = input("Регистрация гостей\n1-Добавить гостя\n2-Удалить гостя\n3-Просмотр гостей: ")
+        if guest == "1":
+            guest = input("Ведите имя гостя: ")
+            guestList.append(guest)
+        elif guest == "2":
+            guest = input("Ведите имя гостя: ")
+            guestList.remove(guest)
+        elif guest == "3":
+            print(guestList)
+        else:
+            print("Ошибка: Выберете из перечисленного")
+    reg = True
