@@ -700,23 +700,111 @@
 
 # задача список гостей
 
+# guestList = []
+# textguest = ""
+# for i in range(0, len(guestList)): 
+#     textguest += f"{i} - {guestList[i]}\n" 
+# reg = False
+# while reg == False:
+#     reg_guest = False
+#     while reg_guest == False:
+#         guest = input("Регистрация гостей\n1-Добавить гостя\n2-Удалить гостя\n3-Просмотр гостей: ")
+#         if guest == "1":
+#             guest = input("Ведите имя гостя: ")
+#             guestList.append(guest)
+#         elif guest == "2":
+#             guest = input("Ведите имя гостя: ")
+#             guestList.remove(guest)
+#         elif guest == "3":
+#             print(guestList)
+#         else:
+#             print("Ошибка: Выберете из перечисленного")
+#     reg = True
+
+#                 0         1
+# productList = ["Каша" , "Вода"]
+# print(productList[0])
+# infoProduct = {
+#     "nameProduct" : "Каша",
+#     "price" : 120,
+#     "sale" : 0.2,
+# }
+# print(f"{infoProduct['price']}\n{infoProduct['sale']}")
+
+# myName = input("введите свое имя: ")
+# myAge = int(input("Сколько вам лет? "))
+# infoPerson = {
+#     "namePerson" : myName,
+#     "agePerson" : myAge,
+#     "hobbyPerson" : ["Sport", "Programming"]
+# }
+# print(infoPerson)
+
+# for key in infoPerson:
+#     print(f"{key} - {infoPerson[key]}")
+
+# productList = [
+#     {
+#         "nameProduct" : "Хлеб",
+#         "price" : 55,
+#         "count" : 37,
+#         "category" : "Хлеб"
+#     },
+#     {
+#         "nameProduct" : "Молоко",
+#         "price" : 101,
+#         "count" : 20,
+#         "category" : "Молочка"
+#     },
+#     {
+#         "nameProduct" : "Яйцо",
+#         "price" : 151,
+#         "count" : 80,
+#         "category" : "Яйцо"
+#     },
+#     {
+#         "nameProduct" : "Майонез",
+#         "price" : 190,
+#         "count" : 700,
+#         "category" : "Молочка"
+#     },
+#     {
+#         "nameProduct" : "Йогурт",
+#         "price" : 900,
+#         "count" : 400,
+#         "category" : "Молочка"
+#     },
+#     {
+#         "nameProduct" : "Кефир",
+#         "price" : 99,
+#         "count" : 6,
+#         "category" : "Молочка"
+#     },
+# ]
+# for i in range(0, len(productList)):
+#     if productList[i]["category"] == "Молочка":
+#         productList[i]["price"] = productList[i]["price"] * 2
+#         print(f"Название товара - {productList[i]['nameProduct']}")
+#         print(f"Цена - {productList[i]['price']}")
+#         print(f"Кол-во - {productList[i]['count']}")
+#         print("-----------------------------")
+
 guestList = []
-textguest = ""
-for i in range(0, len(guestList)): 
-    textguest += f"{i} - {guestList[i]}\n" 
-reg = False
-while reg == False:
-    reg_guest = False
-    while reg_guest == False:
-        guest = input("Регистрация гостей\n1-Добавить гостя\n2-Удалить гостя\n3-Просмотр гостей: ")
-        if guest == "1":
-            guest = input("Ведите имя гостя: ")
-            guestList.append(guest)
-        elif guest == "2":
-            guest = input("Ведите имя гостя: ")
-            guestList.remove(guest)
-        elif guest == "3":
-            print(guestList)
-        else:
-            print("Ошибка: Выберете из перечисленного")
-    reg = True
+
+while True:
+    nameGuest = input("Введите имя гостя: ")
+    ageGuest = int(input("Введите возраст гостя: "))
+    # выше созданные переменные будут бобавлятся в объект infoGuest и вставлятся в соответствующие ключи
+    # infoGuest - хранит данные гостя
+    infoGuest = {
+        "nameGuest" : nameGuest,
+        "ageGuest" : ageGuest,
+    }
+    guestList.append(infoGuest)
+    if len(guestList) > 3:
+        break
+
+for i in range(0, len(guestList)):
+    print(f"Имя гостя - {guestList[i]['nameGuest']}")
+    print(f"Возраст гостя - {guestList[i]['ageGuest']}")
+    print("==================")
