@@ -789,22 +789,23 @@
 #         print(f"Кол-во - {productList[i]['count']}")
 #         print("-----------------------------")
 
-guestList = []
+# guestList = []
 
-while True:
-    nameGuest = input("Введите имя гостя: ")
-    ageGuest = int(input("Введите возраст гостя: "))
-    # выше созданные переменные будут бобавлятся в объект infoGuest и вставлятся в соответствующие ключи
-    # infoGuest - хранит данные гостя
-    infoGuest = {
-        "nameGuest" : nameGuest,
-        "ageGuest" : ageGuest,
-    }
-    guestList.append(infoGuest)
-    if len(guestList) > 3:
-        break
+# while True:
+#     nameGuest = input("Введите имя гостя: ")
+#     ageGuest = int(input("Введите возраст гостя: "))
+#     # выше созданные переменные будут бобавлятся в объект infoGuest и вставлятся в соответствующие ключи
+#     # infoGuest - хранит данные гостя
+#     infoGuest = {
+#         "nameGuest" : nameGuest,
+#         "ageGuest" : ageGuest,
+#     }
+#     guestList.append(infoGuest)
+#     if len(guestList) > 3:
+#         break
 
-for i in range(0, len(guestList)):
-    print(f"Имя гостя - {guestList[i]['nameGuest']}")
-    print(f"Возраст гостя - {guestList[i]['ageGuest']}")
-    print("==================")
+# for i in range(0, len(guestList)):
+#     print(f"Имя гостя - {guestList[i]['nameGuest']}")
+#     print(f"Возраст гостя - {guestList[i]['ageGuest']}")
+#     print("==================")
+
