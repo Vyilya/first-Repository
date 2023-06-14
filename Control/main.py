@@ -37,23 +37,23 @@
 # Задание 3 
 
 
-from random import randint
-n1 = randint(0,10)
-# n2 = randint(40,120)
-# x = int(input("Выбери игру: 0 - от 0 до 10, 1 - от 40 до 120: "))
-k = int(input("Введите число от 0 до 10: "))
-# y = int(input("Введите число от 40 до 120: "))
-while k !=n1:
-        if k < n1:
-            print("Число больше")
+# from random import randint
+# n1 = randint(0,10)
+# # n2 = randint(40,120)
+# # x = int(input("Выбери игру: 0 - от 0 до 10, 1 - от 40 до 120: "))
+# k = int(input("Введите число от 0 до 10: "))
+# # y = int(input("Введите число от 40 до 120: "))
+# while k !=n1:
+#         if k < n1:
+#             print("Число больше")
             
-        elif k > n1:
-            print("Число меньше")
-            k = int(input("Повторите попытку: "))
-        else:
-            print("Вы угадали")
-print(n1)
-print(k)
+#         elif k > n1:
+#             print("Число меньше")
+#             k = int(input("Повторите попытку: "))
+#         else:
+#             print("Вы угадали")
+# print(n1)
+# print(k)
 
 
 
