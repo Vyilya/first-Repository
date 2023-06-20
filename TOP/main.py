@@ -809,3 +809,62 @@
 #     print(f"Возраст гостя - {guestList[i]['ageGuest']}")
 #     print("==================")
 
+# ФУКЦИИ
+
+# def f1(a,b):
+#     c = a + b
+#     print(c)
+# f1(5,2)
+
+# def f1(a):
+#    c = a - 50
+#    print(c)
+#    return c
+# asd = f1(100)
+# print(asd)
+
+# myInfo = {
+
+# }
+
+# print(myInfo)
+#           # myInfo 
+# def regName(massiv, newName):
+# #   myInfo["myName"] = newName
+#     massiv["myName"] = newName
+#     return massiv
+# def regGender(massiv):
+#     x = int(input("1-муж\n2-жен\n"))
+#     if x == 1:
+#         massiv["myGender"] = "Муж"
+#     elif x == 2:
+#         massiv["myGender"] = "Жен"
+#         return massiv
+# def globalReg(massiv):
+#     # massiv = myInfo
+#     regName(massiv,input("Ваше имя: "))
+#     regGender(massiv)
+#     return massiv
+   
+
+# newInfo = globalReg(myInfo)
+# print(newInfo)
+
+
+
+# mult = 0
+# def f1(number):
+#     x = int(input("введите число: "))
+#     y = int(input("введите число: "))
+#     z = int(input("введите число: "))
+#     return number
+# def f2(number):
+#     s = int(input("0 - сумма, 1 - произведение: "))
+#     if s == 0:
+#         number = sum
+#     elif s == 1:
+#         number = mult
+#         return number
+
+# f1({})
+# print(f1)
