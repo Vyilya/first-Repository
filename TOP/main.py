@@ -868,3 +868,91 @@
 
 # f1({})
 # print(f1)
+
+
+# 5 задание из контрольной
+
+
+# [
+#    { "userLogin" : admin,
+#     "userPassword" : admin,
+#     "userName" : Ilya,
+#     "userFirstName" : Vybornov,
+# }
+# ] пример хранения данных пользователей 
+
+usersList = [
+    { 
+    "userLogin" : "admin",
+    "userPassword" : "admin",
+    "userName" : "Ilya",
+    "userFirstName" : "Vybornov",
+},
+] # Список пользователей
+
+while True:
+    x = int(input("Введите:\n1-регистрация нового пользователя\n2-Вход в личный кабинет "))
+    if x == 1: # цикл для регистрации нового пользователя
+        print("------Регистрация------")
+        while True:
+            regUser = { 
+                "userLogin" : "",
+                "userPassword" : "",
+                "userName" : "",
+                "userFirstName" : "",
+            }
+            while True:
+                regLogin = input("Введите логин: ") 
+                if len(usersList) > 0:
+                    for i in range(0, len(usersList)):
+                        if regLogin != usersList[i]["userLogin"]:
+                            regUser["userLogin"] = regLogin
+                        else:
+                            print("Данный логин уже занят\nвведите другой ")
+                            regUser["userLogin"] = ""
+                            break
+                else:
+                    regUser["userLogin"] = regLogin
+                if len (regUser["userLogin"]) > 0:
+                    break
+            regUser["userPassword"] = input("Введите пароль нового пользователя: ")
+            regUser["userName"] = input("Введите имя нового пользователя: ")
+            regUser["userFirstName"] = input("Введите фамилию нового пользователя: ")
+            print("Регистрация завершина")
+            check = int(input("1 - подтвердить\n2 - ввести данные снова"))
+            if check == 1:
+                usersList.append(regUser)
+                break
+            elif check == 2:
+                print("------Регистрация------")
+    elif x == 2:
+        print("-- Вход в ЛК")
+        inLogin = input("Введите логин: ")
+        inPassword = input("Введите пароль: ")
+        for i in range(0, len(usersList)):
+            if inLogin == usersList[i]["userLogin"] and inPassword == usersList[i]["userPassword"]:
+                print("Вход выполнен")
+                while True:
+                    infoUser = int(input("1 - Посмотреть информацию\n2 - Редактировать информацию\n3 - Выход "))
+                    if infoUser == 1:
+                        print(f'Имя : {usersList[i]["userName"]}\n',
+                              f'Фамилия : {usersList[i]["userFirstName"]}\n',
+                              f'Логин : {usersList[i]["userLogin"]}\n'
+                              f'Пароль : {usersList[i]["userPassword"]}\n')
+                    elif infoUser == 2:
+                        print("Редактирование данных")
+                        upDate = int(input("1 - Имя\n2 - Фамилия\n3 - Пароль "))
+                        if upDate == 1:
+                            print(f'Ваше имя {usersList[i]["userName"]}')
+                            usersList[i]["userName"] = input("новое имя")
+                        elif upDate == 2:
+                            print(f'Ваше фамилия {usersList[i]["userFirstName"]}')
+                            usersList[i]["userFirstName"] = input("новая фамилия")
+                        elif upDate == 3:
+                            print(f'Ваш пароль {usersList[i]["userPassword"]}')
+                            usersList[i]["userPassword"] = input("новый пароль")
+                    elif infoUser == 3:
+                        break
+                break
+            elif len(usersList) - 1 == i:
+                print("Неверный логин или пароль")
