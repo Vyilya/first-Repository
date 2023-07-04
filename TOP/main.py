@@ -202,11 +202,12 @@
 
 # print(twoAuto.engine.turbo)
 
-
-# class Animal:
+# class Animal(ABC):
+#     @abstractmethod
 #     def __init__(self, name, sound):
 #         self.name = name
 #         self.sound = sound
+    
 
 #     def activeSound(self):
 #         print(self.sound)
@@ -225,5 +226,105 @@
 #     def digHole(self):
 #         print("Копает яму")
 
+# class Donkey(Animal):
+#     def __init__(self, name):
+#         super().__init__(name, "Йа-йа")        
+
 # myCat = Cat ("Вася")
 # myCat.purr()
+
+# myDonkey = Donkey("Осел")
+# myDonkey.activeSound()
+
+# class Human(ABC):
+#     @abstractmethod
+#     def __init__(self, name, nationality):
+#         self.name = name
+#         self.nationality = nationality
+
+# class Man(Human):
+#     def __init__(self, name, nationality):
+#         self.gender = "Мужской"
+#         super().__init__(name, nationality)
+
+# class Woman(Human):
+#     def __init__(self, name, nationality):
+#         self.gender = "Женский"
+#         super().__init__(name, nationality)
+
+# man = Man("Илья","Китаец")
+# woman = Woman("Маня","Албанка")
+        
+
+# class Grandfather(ABC):
+#     @abstractmethod
+#     def __init__(self, name, hairColor):
+#         self.name = name
+#         self.hairColor = hairColor
+#     def cookingBorscht(self):
+#         print("Готовил вкусный борщ")
+#     def repairCar(self):
+#         print("ремонтировал авто")
+
+# class Father(Grandfather):
+#     def __init__(self, name, hairColor):
+#         super().__init__(name, hairColor)
+
+
+# Ilya = Grandfather("Илья", "Русый")
+# Ilya.cookingBorscht()
+
+# Mishail = Father("Михаил", "Русый")
+# Mishail.cookingBorscht()
+
+
+# class Bird():
+#     def __init__(self, name, sound):
+#         self.name = name
+#         self.sound = sound
+#     def eat(self):
+#         print("Едят")
+#     def hunting(self):
+#         print("охотится")
+
+#     def activeSound(self):
+#         print(self.sound)
+
+# class nofly(Bird):
+#     def __init__(self, name, sound=""):
+#         super().__init__(name, sound)
+#     def goes(self):
+#         print("ходит")
+
+# class fly(nofly):
+#     def __init__(self, name, sound=""):
+#         super().__init__(name, sound)
+#     def fly(self):
+#         print("Летает")
+
+# class crow(fly):
+#     def __init__(self, name):
+#         super().__init__(name,"Кар-кар")
+
+# crow = crow("Вася")
+# crow.activeSound()
+
+from abc import ABC, abstractmethod
+
+class Grandfather(): 
+    def __init__(self, name, hairColor):
+        self.name = name
+        self.hairColor = hairColor       
+    def cookingBorscht(self):
+        print("Готовил вкусный борщ")
+    def repairCar(self):
+        print("ремонтировал авто")
+
+class Father(Grandfather):
+    def __init__(self, name, hairColor):
+        super().__init__(name, hairColor)
+
+Ilya = Grandfather("Илья" , "русый")
+Ilya.cookingBorscht()
+# Misha = Father("Миша" , "русый")
+# Misha.cookingBorscht()
