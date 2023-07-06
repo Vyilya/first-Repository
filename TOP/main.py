@@ -309,22 +309,155 @@
 # crow = crow("Вася")
 # crow.activeSound()
 
-from abc import ABC, abstractmethod
+# class Grandfather(): 
+#     def __init__(self, name, hairColor):
+#         self.name = name
+#         self.hairColor = hairColor       
+#     def cookingBorscht(self):
+#         print("Готовил вкусный борщ")
+#     def repairCar(self):
+#         print("ремонтировал авто")
 
-class Grandfather(): 
-    def __init__(self, name, hairColor):
-        self.name = name
-        self.hairColor = hairColor       
-    def cookingBorscht(self):
-        print("Готовил вкусный борщ")
-    def repairCar(self):
-        print("ремонтировал авто")
+# class Father(Grandfather):
+#     def __init__(self, name, hairColor):
+#         super().__init__(name, hairColor)
 
-class Father(Grandfather):
-    def __init__(self, name, hairColor):
-        super().__init__(name, hairColor)
-
-Ilya = Grandfather("Илья" , "русый")
-Ilya.cookingBorscht()
+# Ilya = Grandfather("Илья" , "русый")
+# Ilya.cookingBorscht()
 # Misha = Father("Миша" , "русый")
 # Misha.cookingBorscht()
+
+# from abc import ABC, abstractmethod
+
+
+
+base_list = [
+    {
+        "first_name" : "Илья",
+        "last_name" : "Выборнов",
+        "birthday" : "19.11.1989",
+        "gender" : "Мужской",
+        "login" : "Vyilya",
+        "password" : "admin",
+    },
+    {
+        "first_name" : "Виталий",
+        "last_name" : "Васин",
+        "birthday" : "25.01.1999",
+        "gender" : "Мужской",
+        "login" : "Vasa",
+        "password" : "12345" ,  
+    },
+    {
+        "first_name" : "Вася",
+        "last_name" : "Ванин",
+        "birthday" : "17.11.1985",
+        "gender" : "Мужской",
+        "login" : "Vаni2",
+        "password" : "12345",
+        
+    },
+    {
+        "first_name" : "Оксана",
+        "last_name" : "Олина",
+        "birthday" : "11.11.1979",
+        "gender" : "Женский",
+        "login" : "Vаni3",
+        "password" : "12345",
+        
+    },
+    {
+        "first_name" : "Оля",
+        "last_name" : "Оксанина",
+        "birthday" : "01.01.1998",
+        "gender" : "Женский",
+        "login" : "Vаni4",
+        "password" : "12345",
+        
+    },
+]
+registered_users = [
+
+]
+
+class User():
+    def __init__(self, user_id, first_name, last_name, birthday, gender, login, password):
+        self.user_id = user_id
+        self.first_name = first_name
+        self.last_name = last_name
+        self.birthday = birthday
+        self.gender = gender
+        self.login = login
+        self.password = password
+        # -----------------------
+        self.status = "user"
+        self.blocking = False
+
+    # Если в классе есть методы с словом update, значит этот метод для изменения информации
+    def update_first_name(self, new_first_name):
+        self.first_name = new_first_name
+    def update_last_name(self, new_last_name):
+        self.last_name = new_last_name
+    def update_birthday(self, new_birthday):
+        self.birthday = new_birthday
+    def update_gender(self, new_gender):
+        self.gender = new_gender
+    def update_password(self, new_password):
+        if self.password == input("Введите старый пароль: "):
+            self.password = new_password
+
+class Moderator(User):
+    def __init__(self, user_id, first_name, last_name, birthday, gender, login, password):
+        super().__init__(user_id, first_name, last_name, birthday, gender, login, password)
+        self.status = "moderator"
+
+        # Блокировка пользователей.
+        def blocking_user(self, users_list):
+            text_user_list = f"id  |  first_name  |  blocking  |  status \n"
+            for i in range(0, len(users_list)):
+                text_user_list += f"{i} - {users_list[i]['user_id']}:{users_list[i]['first_name']} - {users_list[i]['blocking']} {users_list[i]['status']}\n"
+            print(text_user_list)
+            input_user_id = int(input("Введите id пользователя для блокировки: "))
+            for i in range(0, len(users_list)):
+                if self.status == "moderator":
+                    if input_user_id == i and users_list[i]['status'] != "moserator" and users_list[i]['status'] != "admin":
+                        if users_list[i]['blocking'] == True:
+                            print("Пользователь уже заблокирован")
+                            break
+                        else:
+                            users_list[i]['blocking'] = True
+                            print("Пользователь успешно заблокирован")
+                            break
+                elif self.status == "admin":
+                    if input_user_id == i:
+                        if users_list[i]['blocking'] == True:
+                            print("Пользователь уже заблокирован")
+                            break
+                        else:
+                            users_list[i]['blocking'] = True
+                            print("Пользователь успешно заблокирован")
+                            break
+
+
+class Admin(Moderator):
+    def __init__(self, user_id, first_name, last_name, birthday, gender, login, password):
+        super().__init__(user_id, first_name, last_name, birthday, gender, login, password)
+        self.status = "admin"
+
+    def delete_user_list(self, users_list):
+        users_list.clear()
+        print("База данных пуста")
+                                # massiv  - массивом данных
+    def create_users_list(self, massiv, users_list):
+        for i in range(0, len(massiv)):
+            users_list.append(User(user_id=i, 
+                                first_name=massiv[i]["first_name"], 
+                                last_name=massiv[i]["last_name"], 
+                                birthday=massiv[i]["birthday"], 
+                                gender=massiv[i]["gender"],
+                                login=massiv[i]["login"],
+                                password=massiv[i]["password"]))
+
+myAdmin = Admin(10, "admin" , "admin", "01.01.1970", "Мужской", "admin", "admin")
+myAdmin.create_users_list(base_list, registered_users)
+print(registered_users)
