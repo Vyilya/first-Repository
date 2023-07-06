@@ -415,12 +415,12 @@ class Moderator(User):
         def blocking_user(self, users_list):
             text_user_list = f"id  |  first_name  |  blocking  |  status \n"
             for i in range(0, len(users_list)):
-                text_user_list += f"{i} - {users_list[i]['user_id']}:{users_list[i]['first_name']} - {users_list[i]['blocking']} {users_list[i]['status']}\n"
+                text_user_list += f" - {users_list[i].user_id}:{users_list[i].first_name} - {users_list[i].blocking} {users_list[i].status}\n"
             print(text_user_list)
             input_user_id = int(input("Введите id пользователя для блокировки: "))
             for i in range(0, len(users_list)):
                 if self.status == "moderator":
-                    if input_user_id == i and users_list[i]['status'] != "moserator" and users_list[i]['status'] != "admin":
+                    if input_user_id == i and users_list[i]['status'] != "moderator" and users_list[i]['status'] != "admin":
                         if users_list[i]['blocking'] == True:
                             print("Пользователь уже заблокирован")
                             break
@@ -460,4 +460,4 @@ class Admin(Moderator):
 
 myAdmin = Admin(10, "admin" , "admin", "01.01.1970", "Мужской", "admin", "admin")
 myAdmin.create_users_list(base_list, registered_users)
-print(registered_users)
+myAdmin.blocking_user(registered_users)
