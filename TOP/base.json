@@ -1,0 +1,58 @@
+[
+    {
+        "first_name": "Илья",
+        "last_name": "Выборнов",
+        "birthday": "19.11.1989",
+        "gender": "Мужской",
+        "login": "Vyilya",
+        "password": "admin"
+    },
+    {
+        "first_name": "Виталий",
+        "last_name": "Васин",
+        "birthday": "25.01.1999",
+        "gender": "Мужской",
+        "login": "Vasa",
+        "password": "12345"
+    },
+    {
+        "first_name": "Вася",
+        "last_name": "Ванин",
+        "birthday": "17.11.1985",
+        "gender": "Мужской",
+        "login": "Vаni2",
+        "password": "12345"
+    },
+    {
+        "first_name": "Оксана",
+        "last_name": "Олина",
+        "birthday": "11.11.1979",
+        "gender": "Женский",
+        "login": "Vаni3",
+        "password": "12345"
+    },
+    {
+        "first_name": "Оля",
+        "last_name": "Оксанина",
+        "birthday": "01.01.1998",
+        "gender": "Женский",
+        "login": "Vаni4",
+        "password": "12345"
+    },
+    {
+        "first_name": "Собака",
+        "last_name": "Колобака",
+        "birthday": "18.08.1980",
+        "gender": "Мужской",
+        "login": "dog",
+        "password": "admin"
+    },
+    {
+        "first_name": "Собака",
+        "last_name": "Колобака",
+        "birthday": "18.08.1980",
+        "gender": "Мужской",
+        "login": "dog",
+        "password": "admin"
+    }
+]

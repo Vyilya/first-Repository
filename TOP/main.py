@@ -330,6 +330,7 @@
 # from abc import ABC, abstractmethod
 
 
+# base_list - база данных как SQL , не может хранить классов, функции и методы хранится где то на сервере.
 
 # base_list = [
 #     {
@@ -376,133 +377,25 @@
         
 #     },
 # ]
+
+# registered_users - обработанная БД с сервера, хранит в себе весь функционал пользователей, модераторов и админа.
+
 # registered_users = [
 
 # ]
 
-# class User():
-#     def __init__(self, user_id, first_name, last_name, birthday, gender, login, password):
-#         self.user_id = user_id
-#         self.first_name = first_name
-#         self.last_name = last_name
-#         self.birthday = birthday
-#         self.gender = gender
-#         self.login = login
-#         self.password = password
-#         # -----------------------
-#         self.status = "user"
-#         self.blocking = False
-
-#     # Если в классе есть методы с словом update, значит этот метод для изменения информации
-#     def update_first_name(self, new_first_name):
-#         self.first_name = new_first_name
-#         print(f"новое имя: {self.first_name}")
-#     def update_last_name(self, new_last_name):
-#         self.last_name = new_last_name
-#     def update_birthday(self, new_birthday):
-#         self.birthday = new_birthday
-#     def update_gender(self, new_gender):
-#         self.gender = new_gender
-#     def update_password(self, new_password):
-#         if self.password == input("Введите старый пароль: "):
-#             self.password = new_password
-
-# class Moderator(User):
-#     def __init__(self, user_id, first_name, last_name, birthday, gender, login, password):
-#         super().__init__(user_id, first_name, last_name, birthday, gender, login, password)
-#         self.status = "moderator"
-
-#         # Блокировка пользователей.
-#     def blocking_user(self, users_list):
-#         text_user_list = f"id  |  first_name  |  blocking  |  status \n"
-#         for i in range(0, len(users_list)):
-#             text_user_list += f" - {users_list[i].user_id}:{users_list[i].first_name} - {users_list[i].blocking} {users_list[i].status}\n"
-#         print(text_user_list)
-#         input_user_id = int(input("Введите id пользователя для блокировки: "))
-#         for i in range(0, len(users_list)):
-#             if self.status == "moderator":
-#                 if input_user_id == i and users_list[i]['status'] != "moderator" and users_list[i]['status'] != "admin":
-#                     if users_list[i]['blocking'] == True:
-#                         print("Пользователь уже заблокирован")
-#                         break
-#                     else:
-#                         users_list[i]['blocking'] = True
-#                         print("Пользователь успешно заблокирован")
-#                         break
-#             elif self.status == "admin":
-#                 if input_user_id == i:
-#                     if users_list[i]['blocking'] == True:
-#                         print("Пользователь уже заблокирован")
-#                         break
-#                     else:
-#                         users_list[i]['blocking'] = True
-#                         print("Пользователь успешно заблокирован")
-#                         break
 
 
-# class Admin(Moderator):
-#     def __init__(self, user_id, first_name, last_name, birthday, gender, login, password):
-#         super().__init__(user_id, first_name, last_name, birthday, gender, login, password)
-#         self.status = "admin"
 
-#     def delete_user_list(self, users_list):
-#         users_list.clear()
-#         print("База данных пуста")
-#                                 # massiv  - массивом данных
-#     def create_users_list(self, massiv, users_list):
-#         print(len(users_list))
-#         for i in range(0, len(massiv)):
-#             users_list.append(User(user_id=i, 
-#                                 first_name=massiv[i]["first_name"], 
-#                                 last_name=massiv[i]["last_name"], 
-#                                 birthday=massiv[i]["birthday"], 
-#                                 gender=massiv[i]["gender"],
-#                                 login=massiv[i]["login"],
-#                                 password=massiv[i]["password"]))
-
-# class Registration():
-#     def __init__(self) -> None:
-#         pass
-#     def create_user(self, users_list):
-#         users_list.append(User( len(users_list), input("введите имя: "), 
-#                                                             input("введите фамилию: "), 
-#                                                             input("Дата рождения(дд.мм.гггг): "), 
-#                                                             input("введите пол: "),  
-#                                                             input("придумайте логин: "), 
-#                                                             input("придумайте пароль: ")))
-# class InLog():
-#     def __init__(self, login, password):
-#         self.login = login
-#         self.password = password
-#     def log_in_account(self, users_list):
-#         for i in range(len(users_list)):
-#             if users_list[i].login == self.login and users_list[i].password == self.password:
-#                 print("вход выполнен")
-#                 break
-#             elif i == len(users_list):
-#                 print("Ошибка")
-
-# class Manager():
-#     def __init__(self, reg,inlog,userModerAdmin,datalist):
-#         self.reg = reg
-#         self.inlog = inlog
-#         self.userModerAdmin = userModerAdmin
-#         self.datalist = datalist
-#     def work(self):
-#         print(self)
 
 # my_reg = Registration
 # my_inLog = InLog
 # my_person_list = [User,Moderator,Admin]
 # my_base = []
-# # my_person_list[0](10, "admin" , "admin", "01.01.1970", "Мужской", "admin", "admin")
+# my_person_list[0](10, "admin" , "admin", "01.01.1970", "Мужской", "admin", "admin")
 # myManager = Manager(my_reg,my_inLog,my_person_list,my_base)
 # myManager.userModerAdmin[0](10, "admin" , "admin", "01.01.1970", "Мужской", "admin", "admin")
 # myManager.inlog("admin", "admin")
-
-
-
-
 
 # proverka = Registration()
 # proverka.create_user()
@@ -539,3 +432,41 @@
 #     User(0,"name","last_name","01.01.2000", "Мужской","login","pass"),
 #     User(1,"name","last_name","01.01.2000", "Мужской","login","pass"),
 # ]
+
+
+
+# r - только чтение файла read()
+# w - полностью перезаписывает файл write()
+# a - добавить в конец файла текст write()
+# + - чтение и запись
+
+# fileW = open("text.txt", "w", encoding="utf-8")
+# fileW.write("Новый текст\n")
+# fileW.write("Новый текст")
+# fileW.close()
+
+# fileR = open("text.txt", "r", encoding="utf-8")
+# print(fileR.read())
+# fileR.close()
+
+import json
+# открыли файл с возможностью чтения
+base_list = open("base.json", "r", encoding="utf-8")
+# открыли файл на чтение
+base_list_read = base_list.read()
+new_base = json.loads(base_list_read)
+new_base.append  ({
+        "first_name": "Собака",
+        "last_name": "Колобака",
+        "birthday": "18.08.1980",
+        "gender": "Мужской",
+        "login": "dog",
+        "password": "admin"
+    })
+dumps_base = json.dumps(new_base, ensure_ascii=False)
+file = open("base.json", "w", encoding="utf-8")
+file.write(dumps_base)
+# primer = '[{"first_name" : "Ilya", "age" : 33},{"first_name" : "Masha", "age" : 18}]'
+# print(primer[0])
+# massiv = json.loads(primer)
+# print(massiv[0])
