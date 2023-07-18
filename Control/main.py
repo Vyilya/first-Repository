@@ -58,6 +58,75 @@
 
 
 
+#Задание 4 
+
+# weekList = [
+#     {
+#         "weekday" : "Понедельник",
+#         "lesson1" : "Математика",
+#         "lesson2" : "Физика",
+#         "lesson3" : "Информатика",
+#         "lesson4" : "Физкультура",
+#         "vyhodnoy" : "",
+
+#     },
+#     {
+#         "weekday" : "Вторник",
+#         "lesson1" : "Математика",
+#         "lesson2" : "Физика",
+#         "lesson3" : "Информатика",
+#         "lesson4" : "",
+#         "vyhodnoy" : "",
+#     },
+#     {
+#         "weekday" : "Среда",
+#         "lesson1" : "Литература",
+#         "lesson2" : "Физика",
+#         "lesson3" : "Информатика",
+#         "lesson4" : "Математика",
+#         "vyhodnoy" : "",
+#     },
+#     {
+#         "weekday" : "Четверг",
+#         "lesson1" : "Литература",
+#         "lesson2" : "Физика",
+#         "lesson3" : "Информатика",
+#         "lesson4" : "Черчение",
+#         "vyhodnoy" : "",
+#     },
+#     {
+#         "weekday" : "Пятница",
+#         "lesson1" : "Литература",
+#         "lesson2" : "Физика",
+#         "lesson3" : "Ин. язык",
+#         "lesson4" : "Математика",
+#         "vyhodnoy" : "",
+#     },
+#     {
+#         "weekday" : "Суббота",
+#         "lesson1" : "",
+#         "lesson2" : "",
+#         "lesson3" : "",
+#         "lesson4" : "",
+#         "vyhodnoy" : "Выходной",
+#     },
+#     {
+#         "weekday" : "Воскресение",
+#         "lesson1" : "",
+#         "lesson2" : "",
+#         "lesson3" : "",
+#         "lesson4" : "",
+#         "vyhodnoy" : "Выходной",
+#     },    
+# ]
+# for i in range(0,len(weekList)):
+#     print(f"День недели - {weekList[i]['weekday']}")
+#     print(f"1 - {weekList[i]['lesson1']}")
+#     print(f"2 - {weekList[i]['lesson2']}")
+#     print(f"3 - {weekList[i]['lesson3']}")
+#     print(f"4 - {weekList[i]['lesson4']}")
+#     print(f"{weekList[i]['vyhodnoy']}")
+
 
 
     
