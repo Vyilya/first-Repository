@@ -292,31 +292,102 @@
 // }
 
 // Задание 13
-console.log("Зимой и летом одним цветом:\n", "1-ёлка\n", "2-палка\n", "3-тёрка\n");
-let answer = +prompt("Введите 1,2,3 :\n");
- score = 0
-if (answer == "1"){
-    console.log("Вы выбрали верно, получи 2 бала");
-    score = score + 2
+// console.log("Зимой и летом одним цветом:\n", "1-ёлка\n", "2-палка\n", "3-тёрка\n");
+// let answer = +prompt("Введите 1,2,3 :\n");
+//  score = 0
+// if (answer == "1"){
+//     console.log("Вы выбрали верно, получи 2 бала");
+//     score = score + 2
+// }
+
+// else{
+//     console.log("Ответ не верный")
+// }
+
+
+// console.log("Висит груша нельзя скушать:\n", "1-лампочка\n", "2-груша\n", "3-тарелка\n")
+// let answer = +prompt("Введите 1,2,3 :\n")
+// # if answer == "1": 
+// #     print(f"Вы выбрали верно, получи 2 бала")
+// #     score = score + 2
+// # else:
+// #     print("Ответ не верный")
+// # print("Без рук, без ног, А ворота открывает:\n", "1-ветер\n", "2-ключ\n", "3-елка\n")
+// # answer = (input("Введите 1,2,3 :\n"))
+// # if answer == "1": 
+// #     print(f"Вы выбрали верно, получи 2 бала")
+// #     score = score + 2
+// # else:
+// #     print("Ответ не верный")
+// # print("У Вас очков: " , score)
+
+
+// УРОК 2
+// let plus = document.getElementById("plus");
+let plus = document.querySelector("#plus");
+let minus = document.querySelector("#minus");
+let out = document.querySelector("#out");
+console.log(plus);
+console.log(minus);
+console.log(out);
+
+// out.innerHTML = 123;
+
+let title = document.querySelector("title");
+title.innerHTML = "урок " + 2 
+
+let i = 0;
+function plusOut(){
+    i++;
+    out.innerHTML = i;
 }
 
-else{
-    console.log("Ответ не верный")
+function minusOut(){
+    i--;
+    out.innerHTML = i;
+}
+// plusOut()
+// plusOut()
+// minusOut()
+
+plus.addEventListener("click", plusOut)
+minus.addEventListener("click", minusOut)
+
+let number1 = document.querySelector("#number1")
+let number2 = document.querySelector("#number2")
+
+let calcPlus = document.querySelector("#calcPlus")
+let calcMinus = document.querySelector("#calcMinus")
+let calcMul = document.querySelector("#calcMul")
+let calcDiv = document.querySelector("#calcDiv")
+
+let otvet = document.querySelector("#otvet")
+
+
+function fPlus(){
+
+    otvet.innerHTML = Number(number1.value) + Number(number2.value)
+    calcPlus.style.backgroundColor = "coral";
 }
 
+function fMinus(){
+    otvet.innerHTML = Number(number1.value) - Number(number2.value)
+    calcMinus.classList.add = ("coral");
+}
 
-console.log("Висит груша нельзя скушать:\n", "1-лампочка\n", "2-груша\n", "3-тарелка\n")
-let answer = +prompt("Введите 1,2,3 :\n")
-# if answer == "1": 
-#     print(f"Вы выбрали верно, получи 2 бала")
-#     score = score + 2
-# else:
-#     print("Ответ не верный")
-# print("Без рук, без ног, А ворота открывает:\n", "1-ветер\n", "2-ключ\n", "3-елка\n")
-# answer = (input("Введите 1,2,3 :\n"))
-# if answer == "1": 
-#     print(f"Вы выбрали верно, получи 2 бала")
-#     score = score + 2
-# else:
-#     print("Ответ не верный")
-# print("У Вас очков: " , score)
+function fMul(){
+    otvet.innerHTML = Number(number1.value) * Number(number2.value)
+}
+
+function fDiv(){
+    otvet.innerHTML = Number(number1.value) / Number(number2.value)
+}
+
+calcDiv.addEventListener("click" , fDiv)
+calcMul.addEventListener("click" , fMul)
+calcMinus.addEventListener("click" , fMinus)
+calcPlus.addEventListener("click" , fPlus)
+
+// let body = document.body;
+
+// body.style.backgroundColor = "blue";
