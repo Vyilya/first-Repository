@@ -22,4 +22,5 @@ import register.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', register.views.registerView, name='register'),
+    path('questionnaire/', register.views.questionnaireView, name='questionnaire'),
 ]
