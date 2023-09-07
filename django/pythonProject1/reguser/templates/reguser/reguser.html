@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <h1>Регистрация пользователя</h1>
+
+<form action="{% url 'questionnaire' %}">
+   <p><b>Ссылка на ваше фото:</b><br>
+   <input type="url" name="foto" size="40"></p>
+  <p><b>Имя:</b><br>
+   <input type="text"  name="firstname" size="40"></p>
+     <p><b>Фамилия:</b><br>
+   <input type="text" name="lastname" size="40"></p>
+     <label for="start">Дата рождения:</label>
+  <input type="date" name="birth" id="start" name="trip-start"/>
+   <p><b>Ваши навыки:</b><br>
+   <input type="text" name="skill_1" size="40"></p>
+  <input type="text" name="skill_2" size="40"></p>
+  <input type="text" name="skill_3" size="40"></p>
+  <input type="text" name="skill_4" size="40"></p>
+  <input type="text" name="skill_5" size="40"></p>
+  <p>О Себе<Br>
+   <textarea name="about" cols="40" rows="3"></textarea></p>
+  <p><input type="submit" value="Отправить">
+   <input type="reset" value="Очистить"></p>
+  </form>
+
+</body>
+</html>

@@ -16,12 +16,12 @@
         </div>
         <nav>
             <a href="#" class="link">Главная</a>
-            <a href="#" class="link">Блог</a>
+            <a href="{% url 'blog' %}" class="link">Блог</a>
             <a href="#" class="link">Портфолио</a>
         </nav>
         <div class="header-right">
             <!-- Добавить код для проекта на авторизацию-->
-            <a href="#" class="link">Регистрация</a>
+            <a href="{% url 'reguser' %}" class="link">Регистрация</a>
             <a href="#" class="link link-primary">Вход</a>
             <!-- Добавить код, если пользователь авторизировался-->
             <a href="#" class="link link-primary">Выход</a>
@@ -31,15 +31,21 @@
     <main>
         <!-- Добавить код для секции hero, отображать ее только после авторизации-->
         <section class="hero">
-            <img src="" alt="" class="my_image">
-            <span class="first_name">Текст Рыба</span>
-            <span class="last_name">Текст Рыба</span>
-            <span class="my_age">99</span>
+            <div class="wrapper hero-wrapper">
+            <img src="" alt="" class="my_image hero__my_image">
+            <span class="first_name">Имя: Текст Рыба</span>
+            <span class="last_name">Фамилия:Текст Рыба</span>
+            <span class="my_age">Дата рождения: 19.11.1989 (33)</span>
+            <p class="my_desc">О себе: </p>
+            <p class="my_desc">О себе: </p>
+            </div>
         </section>
         <!-- Добавить код для отображения регистрации только для не авторизованных пользователей-->
         <section class="hero">
+            <div class="wrapper hero-wrapper">
             <h2>Регистрация нового пользователя</h2>
             <a href="#" class="sign_link">Регистрация</a>
+            </div>
         </section>
     </main>
 </body>

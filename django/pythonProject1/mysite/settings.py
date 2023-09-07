@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'blog',
     'portfolio',
     'home',
+    'reguser.apps.ReguserConfig',
+
 ]
 
 MIDDLEWARE = [
