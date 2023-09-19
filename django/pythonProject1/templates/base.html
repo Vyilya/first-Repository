@@ -18,15 +18,15 @@
         <nav>
             <a href="{% url 'home' %}" class="link">Главная</a>
             <a href="{% url 'blog' %}" class="link">Блог</a>
-            <a href="#" class="link">Порофиль</a>
+            <a href="{% url 'profile' %}" class="link">Порофиль</a>
         </nav>
         <div class="header-right">
             <!-- Добавить код для проекта на авторизацию-->
             {% if request.user.username %}
-                <a href="#" class="link link-primary">Выход</a>
+                <a href="{% url 'logoutuser' %}"" class="link link-primary">Выход</a>
             {% else %}
                 <a href="{% url 'reguser' %}" class="link">Регистрация</a>
-                <a href="#" class="link link-primary">Вход</a>
+                <a href="{% url 'loginuser' %}" class="link link-primary">Вход</a>
             {% endif %}
             <!-- Добавить код, если пользователь авторизировался-->
 
