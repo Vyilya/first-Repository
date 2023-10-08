@@ -324,69 +324,69 @@
 
 // УРОК 2
 // let plus = document.getElementById("plus");
-let plus = document.querySelector("#plus");
-let minus = document.querySelector("#minus");
-let out = document.querySelector("#out");
-console.log(plus);
-console.log(minus);
-console.log(out);
+// let plus = document.querySelector("#plus");
+// let minus = document.querySelector("#minus");
+// let out = document.querySelector("#out");
+// console.log(plus);
+// console.log(minus);
+// console.log(out);
 
 // out.innerHTML = 123;
 
-let title = document.querySelector("title");
-title.innerHTML = "урок " + 2 
+// let title = document.querySelector("title");
+// title.innerHTML = "урок " + 2 
 
-let i = 0;
-function plusOut(){
-    i++;
-    out.innerHTML = i;
-}
+// let i = 0;
+// function plusOut(){
+//     i++;
+//     out.innerHTML = i;
+// }
 
-function minusOut(){
-    i--;
-    out.innerHTML = i;
+// function minusOut(){
+//     i--;
+//     out.innerHTML = i;
 }
 // plusOut()
 // plusOut()
 // minusOut()
 
-plus.addEventListener("click", plusOut)
-minus.addEventListener("click", minusOut)
+// plus.addEventListener("click", plusOut)
+// minus.addEventListener("click", minusOut)
 
-let number1 = document.querySelector("#number1")
-let number2 = document.querySelector("#number2")
+// let number1 = document.querySelector("#number1")
+// let number2 = document.querySelector("#number2")
 
-let calcPlus = document.querySelector("#calcPlus")
-let calcMinus = document.querySelector("#calcMinus")
-let calcMul = document.querySelector("#calcMul")
-let calcDiv = document.querySelector("#calcDiv")
+// let calcPlus = document.querySelector("#calcPlus")
+// let calcMinus = document.querySelector("#calcMinus")
+// let calcMul = document.querySelector("#calcMul")
+// let calcDiv = document.querySelector("#calcDiv")
 
-let otvet = document.querySelector("#otvet")
+// let otvet = document.querySelector("#otvet")
 
 
-function fPlus(){
+// function fPlus(){
 
-    otvet.innerHTML = Number(number1.value) + Number(number2.value)
-    calcPlus.style.backgroundColor = "coral";
-}
+//     otvet.innerHTML = Number(number1.value) + Number(number2.value)
+//     calcPlus.style.backgroundColor = "coral";
+// }
 
-function fMinus(){
-    otvet.innerHTML = Number(number1.value) - Number(number2.value)
-    calcMinus.classList.add = ("coral");
-}
+// function fMinus(){
+//     otvet.innerHTML = Number(number1.value) - Number(number2.value)
+//     calcMinus.classList.add = ("coral");
+// }
 
-function fMul(){
-    otvet.innerHTML = Number(number1.value) * Number(number2.value)
-}
+// function fMul(){
+//     otvet.innerHTML = Number(number1.value) * Number(number2.value)
+// }
 
-function fDiv(){
-    otvet.innerHTML = Number(number1.value) / Number(number2.value)
-}
+// function fDiv(){
+//     otvet.innerHTML = Number(number1.value) / Number(number2.value)
+// }
 
-calcDiv.addEventListener("click" , fDiv)
-calcMul.addEventListener("click" , fMul)
-calcMinus.addEventListener("click" , fMinus)
-calcPlus.addEventListener("click" , fPlus)
+// calcDiv.addEventListener("click" , fDiv)
+// calcMul.addEventListener("click" , fMul)
+// calcMinus.addEventListener("click" , fMinus)
+// calcPlus.addEventListener("click" , fPlus)
 
 // let body = document.body;
 
